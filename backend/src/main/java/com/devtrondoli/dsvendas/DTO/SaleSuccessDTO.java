@@ -4,15 +4,14 @@ import java.io.Serializable;
 
 import com.devtrondoli.dsvendas.entities.Seller;
 
-public class SaleSuccessDTO implements Serializable{
+public class SaleSuccessDTO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private String sellerName;
 	private Long visited;
 	private Long deals;
-	private Double percentSuccess;
-	
+
 	public SaleSuccessDTO() {
 	}
 
@@ -20,7 +19,6 @@ public class SaleSuccessDTO implements Serializable{
 		this.sellerName = seller.getName();
 		this.visited = visited;
 		this.deals = deals;
-		this.percentSuccess = 100.0D*Double.valueOf(deals)/visited;
 	}
 
 	public String getSellerName() {
@@ -46,15 +44,4 @@ public class SaleSuccessDTO implements Serializable{
 	public void setDeals(Long deals) {
 		this.deals = deals;
 	}
-
-	public Double getPercentSuccess() {
-		return percentSuccess;
-	}
-
-	public void setPercentSuccess(Double percentSuccess) {
-		this.percentSuccess = percentSuccess;
-	}
-
-	
-	
 }
